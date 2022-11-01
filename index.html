@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Currency converter</title>
+</head>
+<body>
+    <main class="main">
+        <header>
+            <div class="logo"></div>
+            <div class="div_text">Currency converter</div>
+        </header>
+        <section>
+            <div class="div_converter">
+                <input type="number" id="inputValue" class="currency_value_from_input">
+                <select id="selectCurrency">
+                    <option id="EUR">EUR</option>
+                    <option id="USD">USD</option>
+                    <option id="CHF">CHF</option>
+                </select>
+                <button id="convert" class="btn">Convert</button>
+                <p>is: <span id="spanValue" class="span">PLN</span></p>
+            </div>
+        </section>
+        <footer>Current day's exchange rate taken from: <a href="https://www.nbp.pl/"><img src="NBP_logo.jpg"></a></footer>
+    </main>
+
+
+    <script src = "index.js"></script>
+</body>
+</html>
