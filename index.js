@@ -32,3 +32,21 @@ frank.addEventListener(("option"),() => {
     .catch((err) => console.error(err));
 
 });
+
+dolar.addEventListener(("option"),() => {
+    const dolarUrl = "//http://api.nbp.pl/api/exchangerates/rates/a/usd/";
+    fetch(dolarUrl)
+    .then((response) => console.log(response))
+    .then((data) => console.log(data))
+    .catch((err) => console.error(err));
+
+});
+
+euro.addEventListener(("option"),() => {
+    const eurokUrl = "//http://api.nbp.pl/api/exchangerates/rates/a/eur/";
+    fetch(eurokUrl)
+    .then((response) => console.log(response))
+    .then((data) => console.log(data))
+    .catch((err) => console.error(err));
+
+});
