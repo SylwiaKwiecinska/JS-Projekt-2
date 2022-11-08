@@ -30,7 +30,7 @@ frank.addEventListener(("option"),() => {
     .then((response) => console.log(response))
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
-
+    
 });
 
 dolar.addEventListener(("option"),() => {
@@ -50,3 +50,5 @@ euro.addEventListener(("option"),() => {
     .catch((err) => console.error(err));
 
 });
+
+
