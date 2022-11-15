@@ -17,38 +17,65 @@ const dolar = document.querySelector("#USD");
 const frank = document.querySelector("#CHF");
 const btn = document.querySelector("#convert");
 const spanValue = document.querySelector("#spanValue");
+const chfUrl = `http://api.nbp.pl/api/exchangerates/rates/a/chf/`;
+const dolarUrl = `http://api.nbp.pl/api/exchangerates/rates/a/usd/`;
+const eurokUrl = `http://api.nbp.pl/api/exchangerates/rates/a/eur/`;
 
-btn.addEventListener(("click"), () => {
 
-spanValue.innerText = inputValue.value * $(selectCurrency);
 
-});
+// btn.addEventListener(("click"), () => {
 
-frank.addEventListener(("option"),() => {
-    const frankUrl = "//http://api.nbp.pl/api/exchangerates/rates/a/chf/";
-    fetch(frankUrl)
-    .then((response) => console.log(response))
-    .then((data) => console.log(data))
-    .catch((err) => console.error(err));
+// spanValue.innerText = inputValue.value * selectCurrency;
+
+// });
+
+
+// function getEur() {
+//     fetch(eurokUrl)
+//     .then((response) => response.json())
+//     .then((data) => console.log(data))
+//     .catch((err) => console.error(err));
+// };
+
+//selectCurrency.addEventListener("change", getEurRate);
+
+
+// function getEurRate(rates) {
+//     for(const rate in rates) {
+//         euro.value = rate; 
+//     };
+// };
+
+
+
+
+
+selectCurrency.addEventListener("change", () => {
+    
+    const chfUrl = `http://api.nbp.pl/api/exchangerates/rates/a/chf/`;
+    fetch(chfUrl)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+   //.catch((err) => console.error(err));
     
 });
 
-dolar.addEventListener(("option"),() => {
-    const dolarUrl = "//http://api.nbp.pl/api/exchangerates/rates/a/usd/";
-    fetch(dolarUrl)
-    .then((response) => console.log(response))
-    .then((data) => console.log(data))
-    .catch((err) => console.error(err));
+// selectCurrency.addEventListener("change",() => {
+//     const dolarUrl = `http://api.nbp.pl/api/exchangerates/rates/a/usd/`;
+//     fetch(dolarUrl)
+//     .then((response) => response.json())
+//     .then((data) => console.log(data))
+//     .catch((err) => console.error(err));
 
-});
+// });
 
-euro.addEventListener(("option"),() => {
-    const eurokUrl = "//http://api.nbp.pl/api/exchangerates/rates/a/eur/";
-    fetch(eurokUrl)
-    .then((response) => console.log(response))
-    .then((data) => console.log(data))
-    .catch((err) => console.error(err));
+// selectCurrency.addEventListener("change",() => {
+//     const eurokUrl = `http://api.nbp.pl/api/exchangerates/rates/a/eur/`;
+//     fetch(eurokUrl)
+//     .then((response) => response.json())
+//     .then((data) => console.log(data))
+//     .catch((err) => console.error(err));
 
-});
+// });
 
 
