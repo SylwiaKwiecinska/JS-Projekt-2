@@ -1,7 +1,7 @@
 let value = 0;
 
 const getCurrencyValue = (currency) => {
-    fetch(`http://api.nbp.pl/api/exchangerates/rates/a/${currency}`)
+    fetch(`https://api.nbp.pl/api/exchangerates/rates/a/${currency}`)
     .then((response) => response.json())
     .then((data) => value = data.rates[0].mid);
 };
