@@ -1,13 +1,3 @@
-//Aktualnie obowiązujący kurs waluty {code} z tabeli kursów typu {table}
-//http://api.nbp.pl/api/exchangerates/rates/{table}/{code}/
-
-//Aktualnie obowiązujący kurs średni waluty CHF
-//http://api.nbp.pl/api/exchangerates/rates/a/chf/
-
-//Notowanie kursu kupna i sprzedaży USD opublikowana w dniu dzisiejszym
-//Jeśli dzisiejsza tabela nie została jeszcze opublikowana zwracany jest kod błędu 404
-//http://api.nbp.pl/api/exchangerates/rates/c/usd/today/
-
 let value = 0;
 
 const getCurrencyValue = (currency) => {
